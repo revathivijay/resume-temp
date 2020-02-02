@@ -5,21 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.
-css"> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./../static/resume_home.css" />
-    <script>$( function() {
-    var tags = ['Advocate', 'Arts', 'Automation Testing', 'Blockchain', 'Business Analyst', 'Civil Engineer', 'Data Science', 'Database', 'DevOps Engineer', 'DotNet Developer', 'ETL Developer', 'Electrical Engineering', 'HR', 'Hadoop', 'Health and fitness', 'Java Developer', 'Mechanical Engineer', 'Network Security Engineer', 'Operations Manager', 'PMO', 'Python Developer', 'SAP Developer', 'Sales', 'Testing', 'Web Designing'];
-    $( "#job_post" ).autocomplete({
-      source: tags
-
-
-    });
-  } ); </script>
-<script src="http://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.js" ></script>
     <style>
+
+
+        html * {
+           
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
         /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
         .row.content {
             height: 650px
@@ -33,6 +29,7 @@ css">
             background-color: #f1f1f1;
             height: 100%;
             image-orientation: 0deg;
+           
         }
 
         /* On small screens, set height to 'auto' for the grid */
@@ -60,6 +57,9 @@ css">
             height: 40px;
             width: 300px;
             border-radius: 5px;
+            background-color:#ffffff;
+            padding-left:3px;
+            box-shadow: 5px 5px;
         }
         .skill_item_class{
             border:2px solid red;
@@ -67,9 +67,9 @@ css">
             height:3em;
             border-radius: 30px;
             text-align:center;
-            width:fit-content;
-
+           
         }
+
 
         .skill_item_subclass{
             width:fit-content;
@@ -85,10 +85,11 @@ css">
         }
 
         .add_skill_button {
-            border: 2px solid green;
+            border: 2px solid #1491c8;
             border-radius: 57px;
             margin: 4px;
             height: 3em;
+      
         }
 
         .add_btn {
@@ -101,7 +102,10 @@ css">
         }
 
         #skill_id{
-            display:inline-flex;
+            display:flex;
+            flex-flow: row wrap;
+            margin-left:10px;
+            margin-top:15px;
         }
 
         .skill_para {
@@ -110,6 +114,27 @@ css">
             width: fit-content;
         }
 
+        #add_skill_input {
+            margin-top: 10px;
+            margin-left: 5px;
+            border: hidden;
+        }
+
+        *:focus {
+            outline: none;
+        }
+
+        .job_post_class {
+            margin-top:10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-size:18px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #job_post{
+            box-shadow: 5px 5px;
+        }
        
     </style>
 </head>
@@ -150,15 +175,20 @@ css">
             <br>
 
             <div class="col-sm-9">
-                <div id="job_post_name" class="well">
-                    <h4>Dashboard</h4>
-                    <p>Some text..</p>
+                <div id="welcome" class="card job_post_class">
+                    <h4>WELCOME</h4>
+                    <p>START SEARCHING FOR CANDIDATES</p>
                 </div>
-                
-                <div class="row" id="skill_id">
-                    
+
+                <div id="job_post_name" class="card job_post_class">
+                    <h4>JOB POST</h4>
+                    <p>SKILLS</p>
                 </div>
-                
+
+                <div class="row page_break_test" id="skill_id">
+
+                </div>
+
             </div>
         </div>
     </div>
